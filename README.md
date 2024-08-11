@@ -6,6 +6,7 @@ There are only a few rules for the env_sourcer. Primarily, you'll need a folder 
 That's pretty much it. Other than this, you'll need your env file that will end in some version of '.local', '.prod', or '.stg' there are other versions you can specify. You can call these files whatever you want. The only other requirement is that you run `export ENVIRONMENT=<your_specified_environment>` in CLI.
 
 After you fill in your env file, import the env_sourcer by running:
+
 `from env_sourcer.services.env_sourcer import EnvSourcer`
 in your python script
 
