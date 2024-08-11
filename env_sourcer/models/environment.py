@@ -22,8 +22,11 @@ class Environment():
     def _verify_env_file_exists(self, environment: str):
         self.files = []
         for file in listdir('envs'):
-            if self._is_valid_file(file, environment):
-                self.files.append(file)
+            try:
+                if self._is_valid_file(file, environment):
+                    self.files.append(file)
+            except:
+                continue
         if len(self.files) != 0:
             return True
         return False
@@ -36,7 +39,7 @@ class Environment():
             raise MissingEnvFolder
         environment = str.lower(getenv('ENVIRONMENT'))
         if not self._verify_valid_environment(environment):
-            raise InvalidEnvironmentError
+            raise InvalidEnvironmentError(environment)
         if not self._verify_env_file_exists(environment):
             raise MissingConfigFileError(environment)
 
