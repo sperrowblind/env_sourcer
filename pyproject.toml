@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "env_sourcer"
-version = "0.0.5"
+version = "v0.0.6"
 requires-python = ">= 3.11"
 description = "library to source environmental variables easily through different environments"
 dependencies = []
@@ -15,6 +15,5 @@ tests = [
 ]
 
 
-[tool.setuptools.packages.find]
-where = ["env_sourcer"]
-
+[tool.setuptools.packages]
+find = {}
