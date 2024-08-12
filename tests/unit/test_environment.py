@@ -1,6 +1,6 @@
-from env_sourcer.models.environment import Environment
-from env_sourcer.models.errors import InvalidEnvironmentError
-from env_sourcer.constants.env_constants import ENVIRONMENTS_MAP
+from ...env_sourcer.models.environment import Environment
+from ...env_sourcer.models.errors import InvalidEnvironmentError
+from ...env_sourcer.constants.env_constants import ENVIRONMENTS_MAP
 import pytest
 
 class TestEnvironment():
@@ -23,4 +23,9 @@ class TestEnvironment():
     def test_invalid_env(self, set_invalid_env):
         with pytest.raises(InvalidEnvironmentError):
             env = Environment()
+
+    def test_no_env(self):
+        with pytest.raises(InvalidEnvironmentError):
+            env = Environment()
+
 

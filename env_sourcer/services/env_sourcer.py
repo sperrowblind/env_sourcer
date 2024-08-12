@@ -1,5 +1,5 @@
-from env_sourcer.models.environment import Environment
-from env_sourcer.models.section import Section
+from ...env_sourcer.models.environment import Environment
+from ...env_sourcer.models.section import Section
 import re
 from typing import Dict
 

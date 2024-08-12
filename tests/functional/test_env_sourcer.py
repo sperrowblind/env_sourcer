@@ -1,5 +1,5 @@
 import pytest
-from env_sourcer.services.env_sourcer import EnvSourcer
+from ...env_sourcer.services.env_sourcer import EnvSourcer
 
 
 class TestEnvSourcer():
