@@ -1,6 +1,10 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "env_sourcer"
-version = "0.0.1"
+version = "v0.0.2"
 requires-python = ">= 3.11"
 description = "library to source environmental variables easily through different environments"
 dependencies = []
@@ -9,3 +13,8 @@ dependencies = []
 tests = [
     "pytest"
 ]
+
+
+[tool.setuptools.packages]
+find = {}
+
