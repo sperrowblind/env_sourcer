@@ -1,5 +1,5 @@
-from ...env_sourcer.constants.env_constants import (ENVIRONMENTS, ENVIRONMENTS_MAP)
-from ...env_sourcer.models.errors import (
+from env_sourcer.constants.env_constants import (ENVIRONMENTS, ENVIRONMENTS_MAP)
+from env_sourcer.models.errors import (
     MissingConfigFileError,
     MissingEnvFolder,
     InvalidEnvironmentError
