@@ -25,6 +25,12 @@ class TestEnvSourcer():
         print(sourcer.test_decimal_3)
         assert isinstance(sourcer.do_something, bool)
         assert sourcer.do_something == True
+        assert isinstance(sourcer.test_false, bool)
+        assert sourcer.test_false == False
+        assert isinstance(sourcer.test_false_again, bool)
+        assert sourcer.test_false_again == False
+        assert isinstance(sourcer.test_false_more, bool)
+        assert sourcer.test_false_more == False
 
     def test_prod_env_sourcer_and_missing_header(self, set_env_prod):
         sourcer = EnvSourcer()
