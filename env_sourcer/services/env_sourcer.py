@@ -62,8 +62,10 @@ class EnvSourcer:
     # This will probably need to be updated in case this converts things that shouldn't be converted
     # Might just keep to bool
     def attempt_to_set_var_type(self, var: str):
-        if var in ['True', 'true', 'false', 'False']:
-            return bool(var)
+        if var in ['True', 'true', 'TRUE']:
+            return True
+        if var in ['False', 'false', 'FALSE']:
+            return False
         if re.match(r'^-?\d+(?:\.\d+)$', var):
             return float(var)
         if var.isdigit():
